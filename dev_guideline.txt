@@ -1,0 +1,68 @@
+Development GUIDELINE
+
+* SECURITY GAPS!
+
+PEP8 style guide  
+->  use pycodestyle package to check PEP8 inconsistencies => “ pycodestyle file.py “ ; “ pycodestyle path/to/directory “
+
+- [ ] Pip package manager
+
+- [ ] Virtualenv package for virtual environments
+
+
+==>  Readability  <==
+
+- [ ] Line length <= 79 characters
+
+- [ ] Comments => used when providing context for non-obvious code block logic; when using a workaround for specific issue; when using complex DSA
+- [ ] Inline Comments => use sparingly when really needed; separated by at least two spaces from the statement
+
+- [ ] Variable Naming:  variables, functions => snake_case; classes => CamelCase; constants ALL_CAPS
+
+- [ ] Docstrings: triple quotes to describe functions, classes and modules
+EXAMPLE:
+“””Docstring
+This is docstring text
+“””
+OR
+“””One line docstring”””
+
+- [ ] Logging: use logging module to report errors instead of print() - for production code
+CODE: 
+	import logging
+	logging.basicConfig(level=logging.INFO)
+	logging.error(“An error occurred!”)
+
+- [ ] Git: commit often, descriptive commit messages
+EXAMPLE: ??? decide together
+Fix: correct index out of range error
+Feat: add user login functionality
+
+- [ ] Dependencies: regularly update requirements.txt with exact library versions
+
+- [ ] Indentation: 4 spaces
+
+- [ ] Imports: top of the file; on separate lines if not a part of the same library; AVOID wildcard imports (“ from module import * ”)
+
+- [ ] Functions and Methods: single responsibility principle -> function does one thing;  use TYPE HINTS where applicable
+
+- [ ] Exceptions: use custom exception classes when needed,  following python’s built-in hierarchy
+
+- [ ] Use list comprehensions where applicable; avoid unnecessary object creation inside loops ( * cProfile could be used to detect performance bottlenecks * )
+
+- [ ] Blank Lines: two blank lines surround top-level function and class definitions; single blank line surrounds class methods;  + blank lines in functions, sparingly, to indicate logical sections
+
+- [ ] Surround operators with single space on each side
+
+- [ ] If operators with different priorities are used, consider adding whitespace (single space) around the operators with the lowest priority
+
+- [ ]  * Avoid trailing whitespace anywhere !
+
+- [ ] No whitespace around ‘=‘ sign when used for keyword arguments
+
+- [ ] Unit Testing: unittest or pytest frameworks; tests are structured in a “ tests/ “ dir
+
+
+SECURITY
+
+- [ ] Using parametarized queries
