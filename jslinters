@@ -1,0 +1,75 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    // Readability rules
+    "max-len": ["error", { "code": 79 }],  // Line length <= 79 characters
+    "indent": ["error", 4],  // Indentation: 4 spaces
+    "quotes": ["error", "double", { "avoidEscape": true }],  // Prefer double quotes
+    "semi": ["error", "always"],  // Enforce semicolons
+    "no-trailing-spaces": "error",  // Avoid trailing whitespace
+    "space-infix-ops": "error",  // Surround operators with spaces
+    "keyword-spacing": ["error", { "before": true, "after": true }],  // Space after keywords
+    "comma-spacing": ["error", { "before": false, "after": true }],  // Ensure space after commas
+    "space-before-function-paren": ["error", "never"],  // No space before function parentheses
+    "spaced-comment": ["error", "always", { "exceptions": ["-"] }],  // Enforce spaces in comments
+
+    // Variable naming and functions
+    "camelcase": ["error", { "properties": "always" }],  // Enforce camelCase for object properties
+    "no-underscore-dangle": "error",  // No underscores in variable names
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "variableLike",
+        "format": ["camelCase"]
+      },
+      {
+        "selector": "function",
+        "format": ["camelCase"]
+      },
+      {
+        "selector": "class",
+        "format": ["PascalCase"]
+      }
+    ],
+
+    // Function-specific rules
+    "no-console": "warn",  // Encourage using logging libraries instead of console.log (security best practice)
+    "@typescript-eslint/explicit-function-return-type": "error",  // Require type hints for functions
+
+    // Blank lines and spacing
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "function", "next": "function" },
+      { "blankLine": "always", "prev": "class", "next": "class" },
+      { "blankLine": "always", "prev": "*", "next": "return" }
+    ],
+
+    // Imports
+    "import/newline-after-import": "error",  // Enforce a newline after import statements
+    "import/no-duplicates": "error",  // Prevent duplicate imports
+    "no-multiple-empty-lines": ["error", { "max": 2 }],  // Limit to 2 blank lines
+
+    // Best practices
+    "eqeqeq": "error",  // Enforce strict equality
+    "no-unused-vars": "warn",  // Warn about unused variables
+
+    // Security practices
+    "security/detect-object-injection": "error"  // Prevent object injection vulnerabilities
+  }
+}
