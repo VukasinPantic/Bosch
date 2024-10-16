@@ -74,8 +74,11 @@ Feat: add user login functionality
 Code example (python):
 
 `import logging`
+
 `logging.basicConfig(level=logging.INFO)`
+
 `logging.error(“An error occurred!”)`
+
 
 
 **Python environment** 
