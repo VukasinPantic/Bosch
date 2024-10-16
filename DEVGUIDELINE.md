@@ -73,7 +73,9 @@ Feat: add user login functionality
 
 Code example (python):
 
-`import logging\nlogging.basicConfig(level=logging.INFO)\nlogging.error(“An error occurred!”)`
+`import logging`
+`logging.basicConfig(level=logging.INFO)`
+`logging.error(“An error occurred!”)`
 
 
 **Python environment** 
