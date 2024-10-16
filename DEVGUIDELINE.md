@@ -1,12 +1,7 @@
-**Development GUIDELINE**
+# Development GUIDELINE
 
-**Python environment**
 
-- Pip/brew package manager
-- Virtualenv package for virtual environments
-- Pylint for live linting (+ pre-commit hook)
-
-**Code Formatting**
+## Code Formatting
 
 - Adhere to PEP8 standards for code style
 - Line length <= 79 characters, for better readability
@@ -19,46 +14,45 @@
 - Avoid trailing whitespace anywhere !
 - No whitespace around ‘=‘ sign when used for keyword arguments
 
-**Naming Conventions**
+## Naming Conventions
 
 - **snake_case** for variable and function names
 - **PascalCase** for class names
 - Constants all **UPPERCASE** with words separated by underscores
 - Prefix unused variables or arguments with an underscore or use underscore only.
 
-**Function and Method Design**
+## Function and Method Design
 
 - Small and focused functions, adhering to Single Responsibility Principle
 - Usage of type hints when applicable
 - Docstrings for functions (and classes) when deemed necessary, explaining parameters, return values, and behavior
 - Default function arguments should never be mutable objects like lists or dictionaries
 
-**Error Handling**
+## Error Handling
 
 - Catch and handle exceptions by using try/except blocks, wherever necessary
 - Avoid catching broad exceptions like Exception unless necessary
 - **Custom exceptions** for domain-specific error handling
 
-**Version Control**
+## Version Control
 
 - Commit code frequently with concise, meaningful commit messages
 
-**EXAMPLE: ? decide**
+## EXAMPLE: ? *decide*
 
 Fix: correct index out of range error
-
 Feat: add user login functionality
 
 - Use a **feature branch workflow** for all new work, merge into the main branch only after code review
 - Never commit secrets (e.g., API keys, passwords) or large binary files to the repository.
 
-**Documentation**
+## Documentation
 
 - Write **README** files for new projects or features, explaining usage, setup, and any special considerations.
 - Ensure code is self-explanatory; avoid unnecessary comments, but use comments to clarify complex logic or when using a workaround for specific issue
 - Inline Comments should be used sparingly, when really needed, and separated by at least two spaces from the statement on the left
 
-**Testing**
+## Testing
 
 - Write **unit tests** for all functions and methods, aiming for high code coverage
 - Unittest/pytest framework for automated testing
@@ -66,24 +60,29 @@ Feat: add user login functionality
 - Ensure tests are successful before pushing any code
 - tests are structured in a “ tests/ “ directory
 
-**Dependency Management**
+## Dependency Management
 
 - Pin versions in requirements.txt to avoid unexpected changes from dependency updates
 - Regularly update requirements.txt with exact library versions
 
-**Logging and Monitoring**
+## Logging and Monitoring
 
 - Logging: use logging module to report errors instead of print() - for production code
 - Log at appropriate levels (DEBUG, INFO, WARNING, ERROR, CRITICAL)
 
-CODE:
+Code example:
 
-import logging
-
+`import logging
 logging.basicConfig(level=logging.INFO)
+logging.error(“An error occurred!”)`
 
-logging.error(“An error occurred!”)
+
+**Python environment** 
+
+- Pip/brew package manager
+- Virtualenv package for virtual environments
+- Pylint for live linting (+ pre-commit hook)
 
 **SECURITY CHECKER ?**
 
-Bandit library
+*Bandit library ?*  :joy:
