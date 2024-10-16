@@ -6,7 +6,7 @@
 - Adhere to PEP8 standards for code style
 - Line length <= 79 characters, for better readability
 - Indentation: 4 spaces
-- Imports at the top of the file; on separate lines if not a part of the same library. Grouping standard libraries, third-party libraries, and local imports separately. Avoid wildcard imports (“ from module import \* ”); There should be no unused imports
+- Imports at the top of the file; on separate lines if not a part of the same library. Grouping standard libraries, third-party libraries, and local imports separately. Avoid wildcard `imports (“ from module import \* ”)`; There should be no unused imports
 - Use line breaks for long statements and function calls for better readability.
 - Blank Lines: two blank lines surround top-level function and class definitions; single blank line surrounds class methods; + blank lines in functions, sparingly, to indicate logical sections
 - Surround operators with single space on each side
@@ -38,13 +38,14 @@
 
 - Commit code frequently with concise, meaningful commit messages
 
-## EXAMPLE: ? *decide*
+**EXAMPLE: ? *decide***
 
 Fix: correct index out of range error
+
 Feat: add user login functionality
 
 - Use a **feature branch workflow** for all new work, merge into the main branch only after code review
-- Never commit secrets (e.g., API keys, passwords) or large binary files to the repository.
+- Never commit secrets (e.g., API keys, passwords) or large binary files to the repository
 
 ## Documentation
 
@@ -73,7 +74,9 @@ Feat: add user login functionality
 Code example:
 
 `import logging
+
 logging.basicConfig(level=logging.INFO)
+
 logging.error(“An error occurred!”)`
 
 
@@ -85,4 +88,4 @@ logging.error(“An error occurred!”)`
 
 **SECURITY CHECKER ?**
 
-*Bandit library ?*  :joy:
+*Bandit library ?*  :smile:
