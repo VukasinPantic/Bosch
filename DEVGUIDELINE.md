@@ -71,13 +71,9 @@ Feat: add user login functionality
 - Logging: use logging module to report errors instead of print() - for production code
 - Log at appropriate levels (DEBUG, INFO, WARNING, ERROR, CRITICAL)
 
-Code example:
+Code example (python):
 
-`import logging
-
-logging.basicConfig(level=logging.INFO)
-
-logging.error(“An error occurred!”)`
+`import logging\nlogging.basicConfig(level=logging.INFO)\nlogging.error(“An error occurred!”)`
 
 
 **Python environment** 
