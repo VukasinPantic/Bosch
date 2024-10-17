@@ -4,14 +4,14 @@
 ## Code Formatting
 
 - Adhere to PEP8 standards for code style
-- Line length <= 79 characters, for better readability
+- Line length <= 79 characters - better readability
 - Indentation: 4 spaces
 - Imports at the top of the file; on separate lines if not a part of the same library. Grouping standard libraries, third-party libraries, and local imports separately. Avoid wildcard `imports (“ from module import \* ”)`; There should be no unused imports
 - Use line breaks for long statements and function calls for better readability.
 - Blank Lines: two blank lines surround top-level function and class definitions; single blank line surrounds class methods; + blank lines in functions, sparingly, to indicate logical sections
 - Surround operators with single space on each side
 - If operators with different priorities are used, consider adding whitespace (single space) around the operators with the lowest priority
-- Avoid trailing whitespace anywhere !
+- Avoid trailing whitespace anywhere
 - No whitespace around ‘=‘ sign when used for keyword arguments
 
 ## Naming Conventions
@@ -30,7 +30,7 @@
 
 ## Error Handling
 
-- Catch and handle exceptions by using try/except blocks, wherever necessary
+- Catch and handle exceptions by using try/except blocks, whenever there's possibility of error
 - Avoid catching broad exceptions like Exception unless necessary
 - **Custom exceptions** for domain-specific error handling
 
@@ -51,15 +51,15 @@ Feat: add user login functionality
 
 - Write **README** files for new projects or features, explaining usage, setup, and any special considerations.
 - Ensure code is self-explanatory; avoid unnecessary comments, but use comments to clarify complex logic or when using a workaround for specific issue
-- Inline Comments should be used sparingly, when really needed, and separated by at least two spaces from the statement on the left
+- Inline Comments should be used sparingly, when really necessary, separated by at least two spaces from the statement on the left
 
 ## Testing
 
 - Write **unit tests** for all functions and methods, aiming for high code coverage
-- Unittest/pytest framework for automated testing
+- Unittest/pytest framework for automated testing (*Python*)
 - Mock external dependencies and APIs during testing to avoid side effects and isolate the function of interest
 - Ensure tests are successful before pushing any code
-- tests are structured in a “ tests/ “ directory
+- Tests are structured in a “ tests/ “ directory
 
 ## Dependency Management
 
@@ -71,7 +71,7 @@ Feat: add user login functionality
 - Logging: use logging module to report errors instead of print() - for production code
 - Log at appropriate levels (DEBUG, INFO, WARNING, ERROR, CRITICAL)
 
-Code example (python):
+Code example (*Python*):
 
 `import logging`
 
@@ -87,6 +87,6 @@ Code example (python):
 - Virtualenv package for virtual environments
 - Pylint for live linting (+ pre-commit hook)
 
-**SECURITY CHECKER ?**
+**SECURITY CHECKERS?**
 
-*Bandit library ?*  :smile:
+*Bandit library (Python)?*  :smile:
